@@ -20,7 +20,7 @@ public class StuController {
 	
 	@Autowired
 	private ServiceIMPL serviceIMPL;
-@PostMapping(value="/sav")
+@PostMapping(value="/sav", consumes = "application/json",produces = "application/json")
 	public ResponseEntity<Student> savei(@RequestBody Student student){
 		
 		Student student2 = serviceIMPL.save1(student);

@@ -35,7 +35,7 @@ public class StuController {
 	return new ResponseEntity<List<Student>>(all,HttpStatus.ACCEPTED);	
 	}
 
-		@GetMapping(value="/sinl")
+		@GetMapping(value="/sinl",consumes = "application/json",produces = "application/json")
 		public ResponseEntity<Optional<Student>> byid(@RequestBody int a){
 			
 			Optional<Student> single = serviceIMPL.single(a);

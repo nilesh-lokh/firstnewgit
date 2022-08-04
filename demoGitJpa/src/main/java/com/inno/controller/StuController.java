@@ -27,7 +27,7 @@ public class StuController {
 		return new ResponseEntity<Student>( student2,HttpStatus.ACCEPTED);
 		
 		}
-		@GetMapping(value ="/fetch")
+		@GetMapping(value ="/fetch",consumes = "application/json",produces = "application/json")
         public ResponseEntity<List<Student>> all(){
 	
 	List<Student> all = serviceIMPL.all();
